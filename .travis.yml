@@ -3,6 +3,3 @@ node_js:
   - "9"
 before_script:
   - npm install -g gatsby-cli
-install: 
-  - npm install
-  - gatsby build
