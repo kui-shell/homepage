@@ -16,7 +16,8 @@ ibmcloud cr login
 
 # Build image and push
 
-gatsby build
 docker build -t kui-landing .
-docker tag kui-landing us.icr.io/kui-shell/kui-landing:1
-docker push us.icr.io/kui-shell/kui-landing:1
+docker tag kui-landing us.icr.io/kui-shell/kui-landing:$TRAVIS_BUILD_NUMBER
+docker push us.icr.io/kui-shell/kui-landing:$TRAVIS_BUILD_NUMBER
+
+helm upgrade -i kui-landing chart

@@ -7,4 +7,13 @@ before_script:
   - npm install -g gatsby-cli
 script:
   - gatsby build
-  - ./push-image.sh
+after_success:
+  - ./deploy.sh
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    -  node_modules
