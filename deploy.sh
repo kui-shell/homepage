@@ -12,11 +12,7 @@ ibmcloud config --check-version=false
 # Log in into IBM Cloud Container Service
 
 ibmcloud login -g 'IBM RESEARCH PRO' -r us-south
-
-STORE_KUBECONFIG=$(ibmcloud ks cluster-config iqs-events | tail -n 1)
-echo $STORE_KUBECONFIG
-eval $STORE_KUBECONFIG
-
+ibmcloud ks cluster-config iqs-events
 ibmcloud cr login
 
 # Build image and push
