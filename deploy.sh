@@ -14,6 +14,7 @@ ibmcloud config --check-version=false
 ibmcloud login -g 'IBM RESEARCH PRO' -r us-south
 
 STORE_KUBECONFIG=$(ibmcloud ks cluster-config iqs-events | tail -n 1)
+echo $STORE_KUBECONFIG
 eval $STORE_KUBECONFIG
 
 ibmcloud cr login
@@ -26,4 +27,4 @@ docker push us.icr.io/kui-shell/kui-landing:$TRAVIS_BUILD_NUMBER
 
 # Deploy to K8s cluster
 
-helm upgrade -i kui-landing chart
+helm upgrade -i kui-landing chart --set image.version=$TRAVIS_BUILD_NUMBER
