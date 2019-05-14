@@ -3,6 +3,7 @@ language: node_js
 node_js:
   - "9"
 before_script:
+  - curl -sL https://ibm.biz/idt-installer | bash
   - npm install -g gatsby-cli
 script:
   - gatsby build
