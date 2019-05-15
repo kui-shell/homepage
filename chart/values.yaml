@@ -3,3 +3,10 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 2
+
+service:
+  port: 80
+
+ingress:
+  subdomain: web
+  domain: iqs-events.us-south.containers.appdomain.cloud

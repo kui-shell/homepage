@@ -6,12 +6,17 @@ metadata:
     app: {{ .Release.Name }}
 spec:
   replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
   template:
     metadata:
       labels:
         app: {{ .Release.Name }}
     spec:
       containers:
-        - name: {{ .Release.Name }}-container
-          image: us.icr.io/kui-shell/kui-landing:{{ .Values.image.version }}
-          imagePullPolicy: Always
+      - name: {{ .Release.Name }}
+        image: us.icr.io/kui-shell/kui-landing:{{ .Values.image.version }}
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: docker-registry-secret
