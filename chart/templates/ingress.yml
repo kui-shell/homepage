@@ -2,6 +2,11 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}-ingress
+  labels:
+    app: {{ .Release.Name }}
+  annotations:
+    kubernetes.io/tls-acme: "True"
+    ingress.bluemix.net/redirect-to-https: "True"
 spec:
   rules:
   - host: {{ .Values.ingress.subdomain }}.{{ .Values.ingress.domain }}
