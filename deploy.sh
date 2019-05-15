@@ -5,22 +5,30 @@
 set -o nounset
 set -o errexit
 
-# Stop version validation
+if [[ $TRAVIS_PULL_REQUEST = "false" ]] 
+then
+    # Stop version validation
 
-ibmcloud config --check-version=false
+    ibmcloud config --check-version=false
 
-# Log in into IBM Cloud Container Service
+    # Log in into IBM Cloud Container Service
 
-ibmcloud login -g 'IBM RESEARCH PRO' -r us-south
-ibmcloud ks cluster-config iqs-events
-ibmcloud cr login
+    ibmcloud login -g 'IBM RESEARCH PRO' -r us-south
+    ibmcloud ks cluster-config iqs-events
+    ibmcloud cr login
 
-# Build image and push
+    # Build image and push
 
-docker build -t kui-landing .
-docker tag kui-landing us.icr.io/kui-shell/kui-landing:$TRAVIS_BUILD_NUMBER
-docker push us.icr.io/kui-shell/kui-landing:$TRAVIS_BUILD_NUMBER
+    docker build -t kui-landing .
+    docker tag kui-landing us.icr.io/kui-shell/kui-landing:$TRAVIS_BUILD_NUMBER
+    docker push us.icr.io/kui-shell/kui-landing:$TRAVIS_BUILD_NUMBER
 
-# Deploy to K8s cluster
+    # Deploy to K8s cluster
 
-helm upgrade -i kui-landing chart --set image.version=$TRAVIS_BUILD_NUMBER
+    helm upgrade -i kui-landing chart --set image.version=$TRAVIS_BUILD_NUMBER   
+else
+    echo "Nothing to do, exit from deploy.sh";
+    exit 0;
+fi
+
+
