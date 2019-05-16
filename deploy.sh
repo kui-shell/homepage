@@ -28,6 +28,8 @@ then
     if helm upgrade -i kui-landing chart --set image.version=$TRAVIS_BUILD_NUMBER | grep -q 'UPGRADE FAILED'; then
         echo "Error upgrading Helm Chart; Probably due to Tiller versions"
         exit 1
+    else
+        echo "Helm Chart upgraded!"
     fi 
 else
     echo "Nothing to do, exit from deploy.sh"
