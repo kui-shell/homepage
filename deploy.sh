@@ -25,10 +25,13 @@ then
 
     # Deploy to K8s cluster
 
-    helm upgrade -i kui-landing chart --set image.version=$TRAVIS_BUILD_NUMBER   
+    if helm upgrade -i kui-landing chart --set image.version=$TRAVIS_BUILD_NUMBER | grep -q 'UPGRADE FAILED'; then
+        echo "Error upgrading Helm Chart; Probably due to Tiller versions"
+        exit 1
+    fi 
 else
-    echo "Nothing to do, exit from deploy.sh";
-    exit 0;
+    echo "Nothing to do, exit from deploy.sh"
+    exit 0
 fi
 
 
