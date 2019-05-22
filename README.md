@@ -24,6 +24,11 @@ If you want to work in your local machine, because the project uses [Gatsby](htt
 
 `src/pages` contain all the pages of the site, they will be translated into HTML static pages.
 
+## References
+
+* [Understanding the Gatsby lifecycle](https://www.narative.co/articles/understanding-the-gatsby-lifecycle)
+* [Sequence of Gastby's bootstrap lifecycle](https://gist.github.com/sw-yx/09306ec03df7b4cd8e7469bb74c078fb)
+
 <!-- AUTO-GENERATED-CONTENT -->
 
 ## 🧐 What's inside?
