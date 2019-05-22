@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import DownloadButton from "../components/download-button"
 import kubectlExamples from "../images/kubectl-examples.jpg"
 
 const IndexPage = () => (
@@ -18,6 +19,8 @@ const IndexPage = () => (
       <div style={{ maxWidth: `600px`, marginBottom: `1.45rem` }}>
         <img src={kubectlExamples} alt="Kubectl examples" />
       </div>
+
+      <DownloadButton />
     </div>
 
     <div id="middle-section">
