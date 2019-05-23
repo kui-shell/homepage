@@ -1,4 +1,5 @@
 import React from "react"
+import { config } from "../config"
 
 export function Analytics() {
   React.useEffect(() => {
@@ -7,9 +8,8 @@ export function Analytics() {
     Countly.q = Countly.q || []
 
     //provide countly initialization parameters
-    Countly.app_key = "3cb27b4529db2bf59eeeecd05a317135a640f1b4"
-    Countly.url =
-      "https://analytics.iqs-events.us-south.containers.appdomain.cloud"
+    Countly.app_key = config.countly.appKey
+    Countly.url = config.countly.serverUrl
 
     Countly.q.push(["track_sessions"])
     Countly.q.push(["track_pageview"])
