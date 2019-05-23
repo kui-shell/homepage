@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Kui`,
-    description: `Kui`,
-    author: `@ibm`,
+    description: `Kui improves your productivity reducing the time you use typing kubectl commands`,
+    author: `@IBMResearch`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
