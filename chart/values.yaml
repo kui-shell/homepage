@@ -7,6 +7,9 @@ replicaCount: 2
 service:
   port: 80
 
+image:
+  secret: default-us-icr-io
+
 ingress:
   subdomain: web
-  domain: iqs-events.us-south.containers.appdomain.cloud
+  domain: kui.us-south.containers.appdomain.cloud
