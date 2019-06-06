@@ -14,7 +14,7 @@ then
     # Log in into IBM Cloud Container Service
 
     ibmcloud login -g 'IBM RESEARCH PRO' -r us-south
-    ibmcloud ks cluster-config iqs-events
+    ibmcloud ks cluster-config kui
     ibmcloud cr login
 
     # Build image and push

@@ -19,4 +19,4 @@ spec:
         image: us.icr.io/kui-shell/kui-landing:{{ .Values.image.version }}
         imagePullPolicy: Always
       imagePullSecrets:
-      - name: docker-registry-secret
+      - name: {{ .Values.image.secret }}

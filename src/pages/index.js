@@ -8,7 +8,7 @@ import kubectlExamples from "../images/kubectl-examples.jpg"
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Kui's home"
+      title="Kui"
       keywords={[`kui`, `kubernetes`, `docker`, `openshift`]}
     />
 

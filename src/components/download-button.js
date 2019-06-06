@@ -1,13 +1,13 @@
 import React from "react"
 
-const MAC = "MacOS";
-const WINDOWS = "Windows";
-const LINUX = "Linux";
-const UNKNOWN = "Unknown";
+const MAC = "MacOS"
+const WINDOWS = "Windows"
+const LINUX = "Linux"
+const UNKNOWN = "Unknown"
 
 const detectOS = () => {
   try {
-    console.log('Detecting user agent');
+    console.log("Detecting user agent")
 
     var userAgent = navigator.userAgent
 

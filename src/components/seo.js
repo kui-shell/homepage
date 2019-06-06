@@ -25,6 +25,29 @@ function SEO({ description, lang, meta, keywords, title }) {
     `
   )
 
+  const schemaOrgJSONLD = {
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    name: title,
+    alternateName: title,
+    applicationCategory: "Tool",
+    about: description,
+    audience: {
+      audienceType: 'Developers'
+    },
+    author: site.siteMetadata.author,
+    keywords,
+    license: 'https://github.com/IBM/kui/blob/master/LICENSE',
+    operatingSystem: ['OSX', 'Windows', 'Linux'],
+    offers: [
+      {
+        description: 'Free',
+        price: 0,
+        priceCurrency: 'USD'
+      }
+    ]
+  }
+
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -77,7 +100,11 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
-    />
+    >
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrgJSONLD)}
+      </script>
+    </Helmet>
   )
 }
 
