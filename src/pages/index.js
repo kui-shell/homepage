@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ExternalScripts from "../components/external-scripts"
 
 import copyIcon from "../ui/copy.svg"
 import downloadIcon from "../ui/download.svg"
@@ -20,6 +21,8 @@ const IndexPage = () => (
       title="Kui"
       keywords={[`kui`, `kubernetes`, `docker`, `openshift`]}
     />
+
+    <ExternalScripts />
 
     <section class="kui-top">
       <div class="ibm-grid-container">
