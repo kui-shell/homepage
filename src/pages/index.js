@@ -12,6 +12,8 @@ import video2 from "../videos/video2.mp4"
 import video3 from "../videos/video3.mp4"
 import video4 from "../videos/video4.mp4"
 
+import "./index.css"
+
 const IndexPage = () => (
   <Layout>
     <SEO
