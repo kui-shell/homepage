@@ -2,8 +2,6 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import DownloadButton from "../components/download-button"
-import kubectlExamples from "../images/kubectl-examples.jpg"
 
 const IndexPage = () => (
   <Layout>
@@ -12,53 +10,155 @@ const IndexPage = () => (
       keywords={[`kui`, `kubernetes`, `docker`, `openshift`]}
     />
 
-    <div id="top-section">
-      <div>
-        Kui is an open-source, supercharged terminal designed for dev-ops.
-      </div>
-      <div style={{ maxWidth: `600px`, marginBottom: `1.45rem` }}>
-        <img src={kubectlExamples} alt="Kubectl examples" />
-      </div>
-
-      <DownloadButton />
-    </div>
-
-    <div id="middle-section">
-      <div>
-        Kui is an open-source, supercharged terminal designed for dev-ops.
-      </div>
-    </div>
-
-    <div id="bottom-section">
-      <div>Made for every cloud.</div>
-
-      <div>
-        <div>Hybrid cloud</div>
-        <div>
-          Choose from thousands of open source packages that add new features
-          and functionality to KUI, or build a package from scratch and publish
-          it for everyone else to use.
+    <section class="kui-top">
+      <div class="ibm-grid-container">
+        <div class="ibm-grid-col-lg-16-1"></div>
+        <div class="ibm-grid-col-lg-16-12 ibm-grid-col-md-8-6">
+          <h2 class="kui-tagline">
+            kui is an open-source,<br />
+            graphical terminal<br />
+            designed for dev-ops<br />
+          </h2>
+        </div>
+        <div class="ibm-grid-col-lg-16-3"></div>
+        <div class="ibm-grid-col-lg-16-1"></div>
+        <div class="ibm-grid-col-lg-16-3 kui-version ibm-type-a">
+          <div class="divider"></div>
+          <span>Version 1.0.1, MIT License</span>
         </div>
       </div>
-
-      <div>
-        <div>Hybrid cloud</div>
-        <div>
-          Choose from thousands of open source packages that add new features
-          and functionality to KUI, or build a package from scratch and publish
-          it for everyone else to use.
+      <div class="ibm-grid-container">
+        <div class="ibm-grid-col-lg-16-1"></div>
+        <div class="ibm-grid-col-lg-16-14">
+          <video muted autoplay controls loop class="kui-hero-video">
+          <source src="./videos/video1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+          </video>
         </div>
+        <div class="ibm-grid-col-lg-16-1"></div>
       </div>
+      <div class="ibm-grid-container">
+        <div class="ibm-grid-col-lg-16-1"></div>
+        <ul class="ibm-grid-col-lg-16-10 ibm-grid-col-md-8-4 kui-packages">
+          <div class="kui-codepaste">
+            <h3 class="ibm-type-a">Brew</h3>
+            <button class="kui-codecopy">
+              <span class="ibm-type-b ibm-type-mono kui-codecopy-content" data-cmd="cmd1">cmd1</span>
+              <img src="./ui/copy.svg" />
+            </button>
+          </div>
+          <div class="kui-codepaste">
+            <h3 class="ibm-type-a">NPM</h3>
+            <button class="kui-codecopy">
+              <span class="ibm-type-b ibm-type-mono kui-codecopy-content" data-cmd="cmd2">cmd2</span>
+              <img src="./ui/copy.svg" />
+            </button>
+          </div>
+        </ul>
+        <ul class="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 kui-links">
+          <h3 class="ibm-type-a">Resources</h3>
+          <a href="#" class="kui-resources-link kui-download-link hidden" data-os="mac">
+            <span>Download for macOS</span>
+            <img src="./ui/download.svg" />
+          </a>
+          <a href="#" class="kui-resources-link kui-download-link hidden" data-os="win">
+            <span>Download for Windows</span>
+            <img src="./ui/download.svg" />
+          </a>
+          <a href="#" class="kui-resources-link kui-download-link hidden" data-os="lindeb">
+            <span>Download for Linux .deb</span>
+            <img src="./ui/download.svg" />
+          </a>
+          <a href="#" class="kui-resources-link kui-download-link hidden" data-os="linrpm">
+            <span>Download for Linux .rpm</span>
+            <img src="./ui/download.svg" />
+          </a>
+          <a href="#" class="kui-resources-link">
+            <span>All Downloads</span>
+            <img src="./ui/pagelink.svg" />
+          </a>
+          <a href="#" class="kui-resources-link">
+            <span>Usage</span>
+            <img src="./ui/pagelink.svg" />
+          </a>
+          <a href="#" class="kui-resources-link">
+            <span>Examples</span>
+            <img src="./ui/pagelink.svg" />
+          </a>
+        </ul>
+        <div class="ibm-grid-col-lg-16-1"></div>
+      </div>
+    </section>
 
-      <div>
-        <div>Hybrid cloud</div>
-        <div>
-          Choose from thousands of open source packages that add new features
-          and functionality to KUI, or build a package from scratch and publish
-          it for everyone else to use.
+    <div class="kui-examples-bg">
+      <section class="ibm-grid-container kui-examples-container">
+        <div class="ibm-grid-col-lg-16-1"></div>
+        <div class="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 ibm-grid-col-sm-4-3">
+          <h2 class="ibm-type-e">With Kui, you can save up to 5x of your time by running a single command.</h2>
         </div>
-      </div>
+        <div class="ibm-grid-col-lg-11"></div>
+        <div class="ibm-grid-col-lg-16-1"></div>
+        <div class="ibm-grid-col-lg-16-14 kui-examples-tabs">
+          <div class="ibm-text-tabs">
+            <ul role="tablist" class="ibm-tabs" aria-label="Tab navigation">
+              <li class="ibm-tab" role="presentation">
+                <a aria-selected="true" role="tab" href="./videos/video2.mp4" class="ibm-active" data-subtitle="Subtitle for video 1">Text tab num 1</a>
+              </li>
+              <li class="ibm-tab" role="presentation">
+                <a role="tab" href="./videos/video3.mp4" data-subtitle="Subtitle for video 2">Text tab num 2</a>
+              </li>
+              <li class="ibm-tab" role="presentation">
+                <a role="tab" href="./videos/video4.mp4" data-subtitle="Subtitle for video 3">Text tab num 3</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="ibm-grid-col-lg-16-1"></div>
+        <div class="ibm-grid-col-lg-16-1"></div>
+        <div class="ibm-grid-col-lg-16-14">
+          <div class="kui-video-player">
+            <video class="kui-tutorial-video active" muted controls>
+            <source src="./videos/video2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="kui-video-subtitle">Subtitle for video 1</p>
+        </div>
+        <div class="ibm-grid-col-lg-16-1"></div>
+        <div class="ibm-grid-col-lg-16-1"></div>
+      </section>
     </div>
+
+    <section class="kui-marketing-container">
+      <div class="ibm-grid-container kui-marketing">
+        <div class="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 ">
+          <h2 class="ibm-type-f">A Modern and Open Take on the Terminal</h2>
+          <div class="divider divider-black"></div>
+        </div>
+        <div class="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
+          <div class="ibm-type-b">
+            <h3 class="ibm-type-b">Compatibility</h3>
+            Kui is designed for the open cloud. Kui works with any Kubernetes or OpenWhisk provider.
+          </div>
+        </div>
+        <div class="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
+          <div>
+            <h3 class="ibm-type-b">Our commitment</h3>
+            <ol class="ibm-type-b">
+              <li>Stability. Kui is coded on a solid Typescript foundation, covered by thousands of tests.</li>
+              <li>Rapid evolution, in response to user's needs.</li>
+              <li>A flexible and open extension mechanism.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
+          <div class="ibm-type-b">
+            <h3 class="ibm-type-b">By DevOps, for DevOps</h3>
+            Kui was created by and for developers and systems operators, based on decades of experience with terminals and consoles. We feel your pain.
+          </div>
+        </div>
+      </div>
+    </section>
   </Layout>
 )
 
