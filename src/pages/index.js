@@ -58,14 +58,14 @@ const IndexPage = () => (
             <h3 class="ibm-type-a">Brew</h3>
             <button class="kui-codecopy">
               <span class="ibm-type-b ibm-type-mono kui-codecopy-content" data-cmd="cmd1">cmd1</span>
-              <img src={copyIcon} />
+              <img src={copyIcon} alt="Copy" />
             </button>
           </div>
           <div class="kui-codepaste">
             <h3 class="ibm-type-a">NPM</h3>
             <button class="kui-codecopy">
               <span class="ibm-type-b ibm-type-mono kui-codecopy-content" data-cmd="cmd2">cmd2</span>
-              <img src={copyIcon} />
+              <img src={copyIcon} alt="Copy" />
             </button>
           </div>
         </ul>
@@ -73,31 +73,31 @@ const IndexPage = () => (
           <h3 class="ibm-type-a">Resources</h3>
           <a href="#" class="kui-resources-link kui-download-link hidden" data-os="mac">
             <span>Download for macOS</span>
-            <img src={downloadIcon} />
+            <img src={downloadIcon} alt="Download" />
           </a>
           <a href="#" class="kui-resources-link kui-download-link hidden" data-os="win">
             <span>Download for Windows</span>
-            <img src={downloadIcon} />
+            <img src={downloadIcon} alt="Download" />
           </a>
           <a href="#" class="kui-resources-link kui-download-link hidden" data-os="lindeb">
             <span>Download for Linux .deb</span>
-            <img src={downloadIcon} />
+            <img src={downloadIcon} alt="Download" />
           </a>
           <a href="#" class="kui-resources-link kui-download-link hidden" data-os="linrpm">
             <span>Download for Linux .rpm</span>
-            <img src={downloadIcon} />
+            <img src={downloadIcon} alt="Download" />
           </a>
           <a href="#" class="kui-resources-link">
             <span>All Downloads</span>
-            <img src={pagelinkIcon} />
+            <img src={pagelinkIcon} alt="Link" />
           </a>
           <a href="#" class="kui-resources-link">
             <span>Usage</span>
-            <img src={pagelinkIcon} />
+            <img src={pagelinkIcon} alt="Link" />
           </a>
           <a href="#" class="kui-resources-link">
             <span>Examples</span>
-            <img src={pagelinkIcon} />
+            <img src={pagelinkIcon} alt="Link" />
           </a>
         </ul>
         <div class="ibm-grid-col-lg-16-1"></div>
