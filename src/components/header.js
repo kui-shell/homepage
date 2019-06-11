@@ -10,7 +10,7 @@ const Header = () => (
       <div class="ibm-grid-col-lg-16-9 ibm-grid-col-md-8-2 ibm-grid-col-sm-4-0"></div>
       <div class="ibm-grid-col-lg-16-6 ibm-grid-col-md-8-5 ibm-grid-col-sm-4-3">
         <button class="icon-button mobile-menu">
-          <img src="./ui/menu.svg" alt="Menu" />
+          <img src={'ui/menu.svg'} alt="Menu" />
         </button>
         <nav>
           <ul class="kui-link-list">
