@@ -10,6 +10,6 @@ service:
 image:
   secret: default-us-icr-io
 
-ingress:
-  subdomain: web
-  domain: kui.us-south.containers.appdomain.cloud
+ingressClass: nginx
+certIssuer: letsencrypt-prod
+certSecret: kui-crt

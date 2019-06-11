@@ -5,18 +5,35 @@ metadata:
   labels:
     app: {{ .Release.Name }}
   annotations:
-    kubernetes.io/tls-acme: "True"
-    ingress.bluemix.net/redirect-to-https: "True"
+    ingress.bluemix.net/redirect-to-https: "true"
+    kubernetes.io/ingress.class: "{{ .Values.ingressClass }}"
+    certmanager.k8s.io/cluster-issuer: "{{ .Values.certIssuer }}"
 spec:
+  tls:
+  - hosts: 
+    - www.kui.wtf
+    - www.kui.tools
+    - www.kuishell.org
+    secretName: "{{ .Values.certSecret }}"
   rules:
-  - host: {{ .Values.ingress.subdomain }}.{{ .Values.ingress.domain }}
+  - host: www.kui.tools
     http:
       paths:
       - path: /
         backend:
           serviceName: {{ .Release.Name }}-service
           servicePort: {{ .Values.service.port }}
-  tls:
-  - hosts:
-    - {{ .Values.ingress.subdomain }}.{{ .Values.ingress.domain }}
-    secretName: iqs-events
+  - host: www.kuishell.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: {{ .Release.Name }}-service
+          servicePort: {{ .Values.service.port }}
+  - host: www.kui.wtf
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: {{ .Release.Name }}-service
+          servicePort: {{ .Values.service.port }}
