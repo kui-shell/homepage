@@ -11,9 +11,9 @@ metadata:
 spec:
   tls:
   - hosts: 
-    - www.kui.wtf
     - www.kui.tools
     - www.kuishell.org
+    - www.kui-shell.net
     secretName: "{{ .Values.certSecret }}"
   rules:
   - host: www.kui.tools
@@ -30,7 +30,7 @@ spec:
         backend:
           serviceName: {{ .Release.Name }}-service
           servicePort: {{ .Values.service.port }}
-  - host: www.kui.wtf
+  - host: www.kui-shell.net
     http:
       paths:
       - path: /

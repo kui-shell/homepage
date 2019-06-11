@@ -8,6 +8,7 @@ spec:
   - www.kui.wtf
   - www.kui.tools
   - www.kuishell.org
+  - www.kui-shell.net
   acme:
     config:
     - http01:
@@ -16,6 +17,7 @@ spec:
       - www.kui.wtf
       - www.kui.tools
       - www.kuishell.org
+      - www.kui-shell.net
   issuerRef:
     name: "{{ .Values.certIssuer }}"
     kind: ClusterIssuer
