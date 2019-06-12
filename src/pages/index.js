@@ -35,7 +35,7 @@ const IndexPage = () => (
       <div className="ibm-grid-container">
         <div className="ibm-grid-col-lg-16-1"></div>
         <div className="ibm-grid-col-lg-16-14">
-          <video muted autoplay controls loop className="kui-hero-video">
+          <video muted autoPlay controls loop className="kui-hero-video">
           <source src={'videos/video1.mp4'} type="video/mp4" />
           Your browser does not support the video tag.
           </video>
