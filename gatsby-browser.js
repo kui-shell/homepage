@@ -6,6 +6,7 @@
 
 const React = require("react")
 const { Analytics } = require("./src/components/analytics")
+const { Main } = require("./src/components/main")
 const { config } = require("./src/config")
 
 exports.wrapRootElement = ({ element }) => {
@@ -13,6 +14,7 @@ exports.wrapRootElement = ({ element }) => {
     <>
       {element}
       <Analytics />
+      <Main />
       <noscript>
         <img
           alt="analytics"

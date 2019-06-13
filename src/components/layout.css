@@ -7,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -20,9 +20,29 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
+}
+
+:root {
+  --gray10: #F3F3F3;
+  --gray20: #DCDCDC;
+  --gray30: #BEBEBE;
+  --gray40: #A4A4A4;
+  --gray50: #8C8C8C;
+  --gray60: #6F6F6F;
+  --gray70: #565656;
+  --gray80: #3D3D3D;
+  --gray90: #252525;
+  --gray100: #171717;
+  --blue80: #0530AD;
+  --blue61: #0354E9;
+  --blue60: #0062FF;
+  --blue50: #418CFF;
+  --blue40: #6EA6FF;
+  --white: #FFFFFF;
+  --black: #000000;
 }
 
 body {
