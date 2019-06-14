@@ -3,6 +3,7 @@ import $ from "jquery";
 
 export function Main() {
   React.useEffect(() => {
+    /* 
     function copyCmd(content) {
       let $temp = $("<textarea>");
       $temp.css({
@@ -27,6 +28,7 @@ export function Main() {
         $buttonContent.text($buttonContent.attr('data-cmd'));
       },2500);
     })
+    */
 
     $('.ibm-tabs').find('.ibm-tab').each(function(){
       $(this).find('a').bind('click',function(e){
