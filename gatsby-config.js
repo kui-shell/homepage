@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Kui`,
-    description: `Kui improves your productivity reducing the time you use typing kubectl commands`,
+    description: `Kui is an open-source, graphical terminal designed for developers.`,
     author: `@IBMResearch`,
   },
   plugins: [

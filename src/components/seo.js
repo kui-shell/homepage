@@ -25,10 +25,13 @@ function SEO({ description, lang, meta, keywords, title }) {
     `
   )
 
+  const metaDescription = description || site.siteMetadata.description
+
   const schemaOrgJSONLD = {
     "@context": "http://schema.org",
     "@type": "SoftwareApplication",
     name: title,
+    description: metaDescription,
     alternateName: title,
     applicationCategory: "Tool",
     about: description,
@@ -47,8 +50,6 @@ function SEO({ description, lang, meta, keywords, title }) {
       }
     ]
   }
-
-  const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet

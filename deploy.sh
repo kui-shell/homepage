@@ -5,6 +5,13 @@
 set -o nounset
 set -o errexit
 
+now=`date +"%H_%M_%m_%d_%Y"`
+TRAVIS_PULL_REQUEST="${TRAVIS_PULL_REQUEST:-false}"
+TRAVIS_BUILD_NUMBER="${TRAVIS_BUILD_NUMBER:-local-$now}"
+
+echo "TRAVIS_PULL_REQUEST = $TRAVIS_PULL_REQUEST"
+echo "TRAVIS_BUILD_NUMBER = $TRAVIS_BUILD_NUMBER"
+
 if [[ $TRAVIS_PULL_REQUEST = "false" ]] 
 then
     # Stop version validation
