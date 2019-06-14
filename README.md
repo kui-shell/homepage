@@ -1,6 +1,6 @@
 # Kui's landing page
 
-[![Build Status](https://travis.ibm.com/Yeray-Darias/kui-landing.svg?token=xyzxnZp9ALxp71M92JLp&branch=master)](https://travis.ibm.com/Yeray-Darias/kui-landing)
+[![Build Status](https://travis.ibm.com/ETX/kui-landing.svg?token=xyzxnZp9ALxp71M92JLp&branch=master)](https://travis.ibm.com/ETX/kui-landing)
 
 This is the landing page for the Kui project.
 
