@@ -1,5 +1,6 @@
-import React from "react"
-import ReactPlayer from 'react-player'
+import React from 'react';
+import ReactPlayer from 'react-player';
+import addCountlyEvent from '../events';
 
 export const KuiExamples = (props) => {
     const firstChildren = React.Children.toArray(props.children)[0].props;
@@ -8,19 +9,6 @@ export const KuiExamples = (props) => {
         currentVideo: firstChildren.reference,
         currentSubtitle: firstChildren.subtitle
     });
-
-    const registerTabChangeEvent = (index) => {
-        const Countly = (window["Countly"] = window["Countly"] || {});
-        Countly.q = Countly.q || [];
-
-        Countly.q.push(['add_event',{
-            "key": `landing-tab`,
-            "count": 1,
-            "segmentation": {
-                "item": index
-            }
-        }]);
-    }
 
     const handleTabClick = (e, index) => {
         e.preventDefault();
@@ -33,7 +21,13 @@ export const KuiExamples = (props) => {
             currentSubtitle: currentChildren.subtitle
         }); 
 
-        registerTabChangeEvent(currentChildren.title);
+        addCountlyEvent({
+            "key": `landing-tab`,
+            "count": 1,
+            "segmentation": {
+                "item": index
+            }
+        });
     }
 
     return (
