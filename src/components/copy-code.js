@@ -1,22 +1,10 @@
 import React from "react"
 import copy from 'copy-to-clipboard';
+import addCountlyEvent from '../events';
 
 const CopyCode = ({title, command}) => {
 
     const [copiedData, setCopiedData] = React.useState(false);
-
-    const registerEvent = () => {
-        const Countly = (window["Countly"] = window["Countly"] || {});
-        Countly.q = Countly.q || [];
-
-        Countly.q.push(['add_event',{
-            "key": `copy-code`,
-            "count": 1,
-            "segmentation": {
-                "item": title
-            }
-        }]);
-    }
 
     const setSuccessMessage = () => {
         setCopiedData(true);
@@ -25,8 +13,15 @@ const CopyCode = ({title, command}) => {
 
     const handleClick = (e) => {
         copy(command);
-        registerEvent();
         setSuccessMessage();
+
+        addCountlyEvent({
+            "key": `copy-code`,
+            "count": 1,
+            "segmentation": {
+                "item": title
+            }
+        });
     };
 
     return (
