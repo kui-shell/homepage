@@ -13,3 +13,10 @@ image:
 ingressClass: nginx
 certIssuer: letsencrypt-prod
 certSecret: kui-crt
+web:
+  domains:
+  - www.kui.tools
+  - www.kuishell.org
+  - www.kui-shell.org
+  - www.kuishell.net
+  - www.kui-shell.net
