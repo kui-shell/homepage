@@ -22,9 +22,9 @@ const IndexPage = () => (
         <div className="ibm-grid-col-lg-16-1"></div>
         <div className="ibm-grid-col-lg-16-12 ibm-grid-col-md-8-6">
           <h2 className="kui-tagline">
-            kui is an open-source,<br />
-            graphical terminal<br />
-            designed for dev-ops<br />
+            kui is a terminal<br />
+            with visualizations<br />
+            by and for DevOps<br />
           </h2>
         </div>
         <div className="ibm-grid-col-lg-16-3"></div>
