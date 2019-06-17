@@ -107,7 +107,7 @@ const IndexPage = () => (
           <div>
             <h3 className="ibm-type-b">Our commitment</h3>
             <ol className="ibm-type-b">
-              <li>Stability. Kui is coded on a solid Typescript foundation, covered by thousands of tests.</li>
+              <li>Stability. Kui is coded on a solid TypeScript foundation, covered by thousands of tests.</li>
               <li>Rapid evolution, in response to user's needs.</li>
               <li>A flexible and open extension mechanism.</li>
             </ol>
