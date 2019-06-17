@@ -11,10 +11,13 @@ export function Analytics() {
     Countly.app_key = config.countly.appKey
     Countly.url = config.countly.serverUrl
 
-    Countly.q.push(["track_sessions"])
-    Countly.q.push(["track_pageview"])
-    Countly.q.push(["track_clicks"])
-    Countly.q.push(["track_scrolls"])
+    Countly.q.push(['track_sessions']);
+    Countly.q.push(['track_pageview']);
+    Countly.q.push(['track_clicks']);
+    Countly.q.push(['track_scrolls']);
+    Countly.q.push(['track_errors']);
+    Countly.q.push(['track_links']);
+    Countly.q.push(['track_forms']);
 
     var cly = document.createElement("script")
     cly.type = "text/javascript"

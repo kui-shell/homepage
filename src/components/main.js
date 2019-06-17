@@ -3,31 +3,6 @@ import $ from "jquery";
 
 export function Main() {
   React.useEffect(() => {
-    function copyCmd(content) {
-      let $temp = $("<textarea>");
-      $temp.css({
-        'opacity': 0.1,
-        'width': '1px',
-        'height': '1px',
-        'position': 'fixed',
-        'top': 0,
-        'left': 0
-      })
-      $("body").append($temp);
-      $temp.val(content).select();
-      document.execCommand("copy");
-      $temp.remove();
-    }
-
-    $('.kui-codecopy').bind('click',function(){
-      let $buttonContent = $(this).find('.kui-codecopy-content');
-      copyCmd($buttonContent.attr('data-cmd'));
-      $buttonContent.text('Copied');
-      setTimeout(function(){
-        $buttonContent.text($buttonContent.attr('data-cmd'));
-      },2500);
-    })
-
     $('.ibm-tabs').find('.ibm-tab').each(function(){
       $(this).find('a').bind('click',function(e){
         e.preventDefault();
