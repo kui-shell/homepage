@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import ExternalScripts from "../components/external-scripts"
 import CopyCode from "../components/copy-code"
 import { KuiExamples, Tab} from "../components/kui-examples"
+import { DownloadButton } from "../components/download-button"
 
 import "./index.css"
 
@@ -52,17 +53,7 @@ const IndexPage = () => (
         </ul>
         <ul className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 kui-links">
           <h3 className="ibm-type-a">Resources</h3>
-          <a href="https://dmg.kui-shell.org" class="kui-resources-link kui-download-link hidden" data-os="mac"><span>Download for macOS</span> <img src="./ui/download.svg" /></a>
-          <a href="https://win32-zip.kui-shell.org" class="kui-resources-link kui-download-link hidden" data-os="win"><span>Download for Windows</span> <img src="./ui/download.svg" /></a>
-          <a href="https://linux-zip.kui-shell.org" class="kui-resources-link kui-download-link hidden" data-os="linzip"><span>Download for Linux .zip</span> <img src="./ui/download.svg" /></a>
-          <a href="#" className="kui-resources-link kui-download-link hidden" data-os="lindeb">
-            <span>Download for Linux .deb</span>
-            <img src={'ui/download.svg'} alt="Download" />
-          </a>
-          <a href="#" className="kui-resources-link kui-download-link hidden" data-os="linrpm">
-            <span>Download for Linux .rpm</span>
-            <img src={'ui/download.svg'} alt="Download" />
-          </a>
+          <DownloadButton />
           <a href="#" className="kui-resources-link">
             <span>All Downloads</span>
             <img src={'ui/pagelink.svg'} alt="Link" />

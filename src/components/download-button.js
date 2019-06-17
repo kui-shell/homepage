@@ -1,34 +1,27 @@
 import React from "react"
 
-const MAC = "MacOS"
-const WINDOWS = "Windows"
-const LINUX = "Linux"
-const UNKNOWN = "Unknown"
-
-const detectOS = () => {
+export const DownloadButton = () => {
   try {
-    console.log("Detecting user agent")
-
     var userAgent = navigator.userAgent
 
     if (userAgent.match(/Macintosh/i)) {
-      return MAC
+      return (<DownloadLink url="https://dmg.kui-shell.org" text="macOS" />)
     } else if (userAgent.match(/Windows/i)) {
-      return WINDOWS
+      return (<DownloadLink url="https://win32-zip.kui-shell.org" text="Windows" />)
     } else if (userAgent.match(/Linux/i)) {
-      return LINUX
-    } else {
-      return UNKNOWN
-    }
+      return (<DownloadLink url="https://linux-zip.kui-shell.org" text="Linux .zip" />)
+    } 
   } catch (err) {
-    return UNKNOWN
+    console.warn('OS not detected');
   }
+
+  return (<div></div>);
 }
 
-const DownloadButton = () => {
-  var currentOS = detectOS()
-
-  return <div>this is a download button for {currentOS}</div>
+const DownloadLink = ({url, text}) => {
+  return (
+    <a href={url} class="kui-resources-link kui-download-link">
+      <span>Download for {text}</span> <img src="./ui/download.svg" alt="download" />
+    </a>
+  );
 }
-
-export default DownloadButton
