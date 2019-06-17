@@ -31,7 +31,7 @@ const IndexPage = () => (
         <div className="ibm-grid-col-lg-16-1"></div>
         <div className="ibm-grid-col-lg-16-3 kui-version ibm-type-a">
           <div className="divider"></div>
-          <span>Version 1.0.1, MIT License</span>
+          <span>Version 1.0.1, Apache-2.0 License</span>
         </div>
       </div>
       <div className="ibm-grid-container">
@@ -100,7 +100,7 @@ const IndexPage = () => (
         <div className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
           <div className="ibm-type-b">
             <h3 className="ibm-type-b">Compatibility</h3>
-            Kui is designed for the open cloud. Kui works with any Kubernetes or OpenWhisk provider.
+            Kui is designed for the open cloud. Kui works with any Kubernetes or Apache OpenWhisk provider.
           </div>
         </div>
         <div className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
