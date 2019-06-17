@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ExternalScripts from "../components/external-scripts"
+import CopyCode from "../components/copy-code"
 
 import "./index.css"
 
@@ -45,20 +46,8 @@ const IndexPage = () => (
       <div className="ibm-grid-container">
         <div className="ibm-grid-col-lg-16-1"></div>
         <ul className="ibm-grid-col-lg-16-10 ibm-grid-col-md-8-4 kui-packages">
-          <div className="kui-codepaste">
-            <h3 className="ibm-type-a">Brew</h3>
-            <button className="kui-codecopy">
-              <span className="ibm-type-b ibm-type-mono kui-codecopy-content" data-cmd="cmd1">cmd1</span>
-              <img src={'ui/copy.svg'} alt="Copy" />
-            </button>
-          </div>
-          <div className="kui-codepaste">
-            <h3 className="ibm-type-a">NPM</h3>
-            <button className="kui-codecopy">
-              <span className="ibm-type-b ibm-type-mono kui-codecopy-content" data-cmd="cmd2">cmd2</span>
-              <img src={'ui/copy.svg'} alt="Copy" />
-            </button>
-          </div>
+          <CopyCode title="Brew" command="brew command"/>
+          <CopyCode title="NPM" command="npm command"/>
         </ul>
         <ul className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 kui-links">
           <h3 className="ibm-type-a">Resources</h3>
