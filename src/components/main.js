@@ -16,7 +16,7 @@ export function Main() {
         } else if (windowsPlatforms.indexOf(platform) !== -1) {
             os = 'win';
         } else if (!os && /Linux/.test(platform)) {
-            os = 'lindeb';
+            os = 'linzip';
         } else {
             os = 'win';
         }
