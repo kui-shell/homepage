@@ -1,4 +1,5 @@
 import React from "react"
+import ReactPlayer from 'react-player'
 
 export const KuiExamples = (props) => {
     const firstChildren = React.Children.toArray(props.children)[0].props;
@@ -60,7 +61,7 @@ export const KuiExamples = (props) => {
                 <div className="ibm-grid-col-lg-16-1"></div>
                 <div className="ibm-grid-col-lg-16-1"></div>
                 <div className="ibm-grid-col-lg-16-14">
-                <VideoPlayer url={tabsState.currentVideo} />
+                <ReactPlayer url={tabsState.currentVideo} width="100%" height="auto" playing muted controls className="kui-video-player" />
                 <p className="kui-video-subtitle">{tabsState.currentSubtitle}</p>
                 </div>
                 <div className="ibm-grid-col-lg-16-1"></div>
@@ -81,16 +82,5 @@ export const Tab = ({title, index, active, reference, subtitle, onClick}) => {
                 {title}
             </a>
         </li>
-    );
-}
-
-const VideoPlayer = ({url}) => {
-    return (
-        <div className="kui-video-player">
-            <video className="kui-tutorial-video active" muted controls>
-            <source src={url} type="video/mp4" />
-            Your browser does not support the video tag.
-            </video>
-        </div>
     );
 }

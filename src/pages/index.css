@@ -144,10 +144,7 @@ ul, li {
   width:100%;
   background-color: var(--black);
 }
-.kui-video-subtitle {
-  margin-top:0.5rem;
-}
-.kui-tutorial-video {
+.kui-video-player video {
   background-color: var(--black);
   z-index:1;
   transition:0.2s ease-out opacity, 0.2s ease-out visibility;
@@ -157,7 +154,8 @@ ul, li {
   position:relative;
   width:100%;
 }
-.kui-tutorial-video.active {
+.kui-video-subtitle {
+  margin-top:0.5rem;
 }
 .kui-marketing-container .divider {
   margin-bottom: 1.5rem;
