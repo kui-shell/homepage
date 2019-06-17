@@ -4,20 +4,18 @@ metadata:
   name: "{{ .Values.certSecret }}"
 spec:
   secretName: "{{ .Values.certSecret }}"
-  dnsNames:
-  - www.kui.wtf
-  - www.kui.tools
-  - www.kuishell.org
-  - www.kui-shell.net
+  dnsNames: 
+    {{- range .Values.web.domains }}
+    - {{ . }}
+    {{- end }}
   acme:
     config:
     - http01:
         ingressClass: "{{ .Values.ingressClass }}"
-      domains:
-      - www.kui.wtf
-      - www.kui.tools
-      - www.kuishell.org
-      - www.kui-shell.net
+      domains: 
+        {{- range .Values.web.domains }}
+        - {{ . }}
+        {{- end }}
   issuerRef:
     name: "{{ .Values.certIssuer }}"
     kind: ClusterIssuer

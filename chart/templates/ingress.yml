@@ -11,29 +11,18 @@ metadata:
 spec:
   tls:
   - hosts: 
-    - www.kui.tools
-    - www.kuishell.org
-    - www.kui-shell.net
+      {{- range .Values.web.domains }}
+      - {{ . }}
+      {{- end }}
     secretName: "{{ .Values.certSecret }}"
   rules:
-  - host: www.kui.tools
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: {{ .Release.Name }}-service
-          servicePort: {{ .Values.service.port }}
-  - host: www.kuishell.org
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: {{ .Release.Name }}-service
-          servicePort: {{ .Values.service.port }}
-  - host: www.kui-shell.net
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: {{ .Release.Name }}-service
-          servicePort: {{ .Values.service.port }}
+    {{- $root := . -}}
+    {{- range .Values.web.domains }}
+    - host: {{ . }}
+      http:
+        paths:
+        - path: /
+          backend:
+            serviceName: {{ $root.Release.Name }}-service
+            servicePort: {{ $root.Values.service.port }}
+    {{- end }}
