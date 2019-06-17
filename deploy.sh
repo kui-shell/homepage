@@ -21,8 +21,11 @@ then
     # Log in into IBM Cloud Container Service
 
     ibmcloud login -g 'IBM RESEARCH PRO' -r us-south
-    ibmcloud ks cluster-config kui
+    STORE_KUBECONFIG=$(ibmcloud ks cluster-config kui | tail -n 1)
+    eval $STORE_KUBECONFIG
     ibmcloud cr login
+
+    
 
     # Build image and push
 
