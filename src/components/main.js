@@ -3,6 +3,7 @@ import $ from "jquery";
 
 export function Main() {
   React.useEffect(() => {
+    /*
     $('.ibm-tabs').find('.ibm-tab').each(function(){
       $(this).find('a').bind('click',function(e){
         e.preventDefault();
@@ -39,6 +40,7 @@ export function Main() {
         }
       })
     }
+    */
 
     function getOS() {
         let userAgent = window.navigator.userAgent,

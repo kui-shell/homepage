@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ExternalScripts from "../components/external-scripts"
 import CopyCode from "../components/copy-code"
+import { KuiExamples, Tab} from "../components/kui-examples"
 
 import "./index.css"
 
@@ -84,44 +85,11 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <div className="kui-examples-bg">
-      <section className="ibm-grid-container kui-examples-container">
-        <div className="ibm-grid-col-lg-16-1"></div>
-        <div className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 ibm-grid-col-sm-4-3">
-          <h2 className="ibm-type-e">With Kui, you can save up to 5x of your time by running a single command.</h2>
-        </div>
-        <div className="ibm-grid-col-lg-11"></div>
-        <div className="ibm-grid-col-lg-16-1"></div>
-        <div className="ibm-grid-col-lg-16-14 kui-examples-tabs">
-          <div className="ibm-text-tabs">
-            <ul role="tablist" className="ibm-tabs" aria-label="Tab navigation">
-              <li className="ibm-tab" role="presentation">
-                <a aria-selected="true" role="tab" href={'videos/video2.mp4'} className="ibm-active" data-subtitle="Subtitle for video 1">Text tab num 1</a>
-              </li>
-              <li className="ibm-tab" role="presentation">
-                <a role="tab" href={'videos/video3.mp4'} data-subtitle="Subtitle for video 2">Text tab num 2</a>
-              </li>
-              <li className="ibm-tab" role="presentation">
-                <a role="tab" href={'videos/video4.mp4'} data-subtitle="Subtitle for video 3">Text tab num 3</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="ibm-grid-col-lg-16-1"></div>
-        <div className="ibm-grid-col-lg-16-1"></div>
-        <div className="ibm-grid-col-lg-16-14">
-          <div className="kui-video-player">
-            <video className="kui-tutorial-video active" muted controls>
-            <source src={'videos/video2.mp4'} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <p className="kui-video-subtitle">Subtitle for video 1</p>
-        </div>
-        <div className="ibm-grid-col-lg-16-1"></div>
-        <div className="ibm-grid-col-lg-16-1"></div>
-      </section>
-    </div>
+    <KuiExamples>
+        <Tab title="Text tab num 1" reference="videos/video2.mp4" subtitle="Subtitle for video 1" />
+        <Tab title="Text tab num 2" reference="videos/video3.mp4" subtitle="Subtitle for video 2" />
+        <Tab title="Text tab num 3" reference="videos/video4.mp4" subtitle="Subtitle for video 3" />
+    </KuiExamples>
 
     <section className="kui-marketing-container">
       <div className="ibm-grid-container kui-marketing">
