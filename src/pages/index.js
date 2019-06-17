@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import ExternalScripts from "../components/external-scripts"
 import CopyCode from "../components/copy-code"
 import { KuiExamples, Tab} from "../components/kui-examples"
+import { DownloadButton } from "../components/download-button"
 
 import "./index.css"
 
@@ -22,16 +23,16 @@ const IndexPage = () => (
         <div className="ibm-grid-col-lg-16-1"></div>
         <div className="ibm-grid-col-lg-16-12 ibm-grid-col-md-8-6">
           <h2 className="kui-tagline">
-            kui is an open-source,<br />
-            graphical terminal<br />
-            designed for dev-ops<br />
+            kui is a terminal<br />
+            with visualizations<br />
+            by and for DevOps<br />
           </h2>
         </div>
         <div className="ibm-grid-col-lg-16-3"></div>
         <div className="ibm-grid-col-lg-16-1"></div>
         <div className="ibm-grid-col-lg-16-3 kui-version ibm-type-a">
           <div className="divider"></div>
-          <span>Version 1.0.1, MIT License</span>
+          <span>Version 1.0.1, Apache-2.0 License</span>
         </div>
       </div>
       <div className="ibm-grid-container">
@@ -52,22 +53,7 @@ const IndexPage = () => (
         </ul>
         <ul className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 kui-links">
           <h3 className="ibm-type-a">Resources</h3>
-          <a href="#" className="kui-resources-link kui-download-link hidden" data-os="mac">
-            <span>Download for macOS</span>
-            <img src={'ui/download.svg'} alt="Download" />
-          </a>
-          <a href="#" className="kui-resources-link kui-download-link hidden" data-os="win">
-            <span>Download for Windows</span>
-            <img src={'ui/download.svg'} alt="Download" />
-          </a>
-          <a href="#" className="kui-resources-link kui-download-link hidden" data-os="lindeb">
-            <span>Download for Linux .deb</span>
-            <img src={'ui/download.svg'} alt="Download" />
-          </a>
-          <a href="#" className="kui-resources-link kui-download-link hidden" data-os="linrpm">
-            <span>Download for Linux .rpm</span>
-            <img src={'ui/download.svg'} alt="Download" />
-          </a>
+          <DownloadButton />
           <a href="#" className="kui-resources-link">
             <span>All Downloads</span>
             <img src={'ui/pagelink.svg'} alt="Link" />
@@ -100,14 +86,14 @@ const IndexPage = () => (
         <div className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
           <div className="ibm-type-b">
             <h3 className="ibm-type-b">Compatibility</h3>
-            Kui is designed for the open cloud. Kui works with any Kubernetes or OpenWhisk provider.
+            Kui is designed for the open cloud. Kui works with any Kubernetes or Apache OpenWhisk provider.
           </div>
         </div>
         <div className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
           <div>
             <h3 className="ibm-type-b">Our commitment</h3>
             <ol className="ibm-type-b">
-              <li>Stability. Kui is coded on a solid Typescript foundation, covered by thousands of tests.</li>
+              <li>Stability. Kui is coded on a solid TypeScript foundation, covered by thousands of tests.</li>
               <li>Rapid evolution, in response to user's needs.</li>
               <li>A flexible and open extension mechanism.</li>
             </ol>

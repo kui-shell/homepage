@@ -14,8 +14,8 @@ const Header = () => (
         </button>
         <nav>
           <ul className="kui-link-list">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Documentation</a></li>
+            <li><a href="https://github.com/IBM/kui" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://github.com/IBM/kui/blob/master/docs/installation.md" target="_blank" rel="noopener noreferrer">Documentation</a></li>
           </ul>
         </nav>
       </div>
