@@ -25,7 +25,7 @@ const IndexPage = () => (
           <h2 className="kui-tagline">
             kui is a terminal<br />
             with visualizations<br />
-            by and for DevOps<br />
+            by and for developers<br />
           </h2>
         </div>
         <div className="ibm-grid-col-lg-16-3"></div>
