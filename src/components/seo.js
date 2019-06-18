@@ -48,7 +48,9 @@ function SEO({ description, lang, meta, keywords, title }) {
         price: 0,
         priceCurrency: 'USD'
       }
-    ]
+    ],
+    screenshot: "https://www.kui-shell.org/images/screenshot.jpg",
+    image: "https://www.kui-shell.org/images/screenshot.jpg"
   }
 
   return (
@@ -76,8 +78,12 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `https://www.kui-shell.org/images/screenshot.jpg`
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -90,6 +96,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          property: `twitter:image:src`,
+          content: `https://www.kui-shell.org/images/screenshot.jpg`
         },
       ]
         .concat(
