@@ -1,13 +1,14 @@
 import React from "react"
+import {GitHubLink, DocumentationLink, HomeLink} from "./links";
 
 const Footer = () => (
   <footer className="kui-footer">
     <div className="ibm-grid-container">
       <div className="ibm-grid-col-lg-16-12 ibm-grid-col-md-8-5">
         <ul className="kui-link-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">Documentation</a></li>
+          <li><HomeLink /></li>
+          <li><GitHubLink /></li>
+          <li><DocumentationLink /></li>
         </ul>
         <small className="copyright">2019</small>
       </div>

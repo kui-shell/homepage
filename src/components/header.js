@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import {GitHubLink, DocumentationLink} from "./links";
 
 const Header = () => (
   <header className="kui-main-nav">
@@ -14,8 +15,8 @@ const Header = () => (
         </button>
         <nav>
           <ul className="kui-link-list">
-            <li><a href="https://github.com/IBM/kui" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://github.com/IBM/kui/blob/master/docs/installation.md" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+            <li><GitHubLink /></li>
+            <li><DocumentationLink /></li>
           </ul>
         </nav>
       </div>
