@@ -54,16 +54,8 @@ const IndexPage = () => (
         <ul className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 kui-links">
           <h3 className="ibm-type-a">Resources</h3>
           <DownloadButton />
-          <a href="#" className="kui-resources-link">
+          <a href="https://github.com/IBM/kui/releases" className="kui-resources-link">
             <span>All Downloads</span>
-            <img src={'ui/pagelink.svg'} alt="Link" />
-          </a>
-          <a href="#" className="kui-resources-link">
-            <span>Usage</span>
-            <img src={'ui/pagelink.svg'} alt="Link" />
-          </a>
-          <a href="#" className="kui-resources-link">
-            <span>Examples</span>
             <img src={'ui/pagelink.svg'} alt="Link" />
           </a>
         </ul>
