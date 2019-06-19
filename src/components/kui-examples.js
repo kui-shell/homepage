@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
 import addCountlyEvent from '../events';
 
 export const KuiExamples = (props) => {
@@ -55,7 +54,7 @@ export const KuiExamples = (props) => {
                 <div className="ibm-grid-col-lg-16-1"></div>
                 <div className="ibm-grid-col-lg-16-1"></div>
                 <div className="ibm-grid-col-lg-16-14">
-                <ReactPlayer url={tabsState.currentVideo} width="100%" height="auto" playing muted controls className="kui-video-player" />
+                <img src={tabsState.currentVideo} alt={tabsState.currentSubtitle} width="100%" />
                 <p className="kui-video-subtitle">{tabsState.currentSubtitle}</p>
                 </div>
                 <div className="ibm-grid-col-lg-16-1"></div>
