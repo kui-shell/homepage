@@ -64,9 +64,9 @@ const IndexPage = () => (
     </section>
 
     <KuiExamples>
-        <Tab title="Text tab num 1" reference="videos/video2.mp4" subtitle="Subtitle for video 1" />
-        <Tab title="Text tab num 2" reference="videos/video3.mp4" subtitle="Subtitle for video 2" />
-        <Tab title="Text tab num 3" reference="videos/video4.mp4" subtitle="Subtitle for video 3" />
+        <Tab title="Nice output" reference="images/nice-tables.png" subtitle="Nicer output visualization to increase productivity" />
+        <Tab title="Output details" reference="images/sidecar.png" subtitle="Fast access to the resources details" />
+        <Tab title="K8s Contexts" reference="images/contexts.png" subtitle="Change your K8s context with 1 click" />
     </KuiExamples>
 
     <section className="kui-marketing-container">
