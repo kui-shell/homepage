@@ -38,9 +38,7 @@ const IndexPage = () => (
       </div>
       <div className="ibm-grid-container">
         <div className="ibm-grid-col-lg-16-1"></div>
-        <div className="ibm-grid-col-lg-16-14">
-          <KuiVideo />
-        </div>
+        <KuiVideo />
         <div className="ibm-grid-col-lg-16-1"></div>
       </div>
       <div className="ibm-grid-container">
