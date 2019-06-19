@@ -55,7 +55,7 @@ export const KuiExamples = (props) => {
                 <div className="ibm-grid-col-lg-16-1"></div>
                 <div className="ibm-grid-col-lg-16-1"></div>
                 <div className="ibm-grid-col-lg-16-14">
-                <ReactPlayer url={tabsState.currentVideo} width="100%" height="auto" playing muted controls className="kui-video-player" />
+                <ReactPlayer url={tabsState.currentVideo} width="100%" height="auto" muted controls className="kui-video-player" />
                 <p className="kui-video-subtitle">{tabsState.currentSubtitle}</p>
                 </div>
                 <div className="ibm-grid-col-lg-16-1"></div>

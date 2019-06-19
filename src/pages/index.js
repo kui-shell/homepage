@@ -6,6 +6,7 @@ import ExternalScripts from "../components/external-scripts"
 import CopyCode from "../components/copy-code"
 import { KuiExamples, Tab} from "../components/kui-examples"
 import { DownloadButton } from "../components/download-button"
+import { KuiVideo } from "../components/kui-video"
 
 import "./index.css"
 
@@ -38,10 +39,7 @@ const IndexPage = () => (
       <div className="ibm-grid-container">
         <div className="ibm-grid-col-lg-16-1"></div>
         <div className="ibm-grid-col-lg-16-14">
-          <video muted autoPlay controls loop className="kui-hero-video">
-          <source src="videos/KUI_Horizontal.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-          </video>
+          <KuiVideo />
         </div>
         <div className="ibm-grid-col-lg-16-1"></div>
       </div>
