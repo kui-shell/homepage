@@ -68,29 +68,27 @@ const IndexPage = () => (
     <section className="kui-marketing-container">
       <div className="ibm-grid-container kui-marketing">
         <div className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 ">
-          <h2 className="ibm-type-f">A Modern and Open Take on the Terminal</h2>
+          <h2 className="ibm-type-f">A Modern and open take on the terminal</h2>
           <div className="divider divider-black"></div>
         </div>
         <div className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
           <div className="ibm-type-b">
             <h3 className="ibm-type-b">Compatibility</h3>
-            Kui is designed for the open cloud. Kui works with any Kubernetes or Apache OpenWhisk provider.
-          </div>
-        </div>
-        <div className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
-          <div>
-            <h3 className="ibm-type-b">Our commitment</h3>
-            <ol className="ibm-type-b">
-              <li>Stability. Kui is coded on a solid TypeScript foundation, covered by thousands of tests.</li>
-              <li>Rapid evolution, in response to user's needs.</li>
-              <li>A flexible and open extension mechanism.</li>
-            </ol>
+            Kui is designed for the open cloud. It works with any Kubernetes or OpenWhisk provider.
           </div>
         </div>
         <div className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
           <div className="ibm-type-b">
             <h3 className="ibm-type-b">By DevOps, for DevOps</h3>
-            Kui was created by and for developers and systems operators, based on decades of experience with terminals and consoles. We feel your pain.
+            Kui was created by and for developers and systems operators, based on decades of experience 
+            with terminals and consoles. We feel your pain. Try it and tell us what you think.
+          </div>
+        </div>
+        <div className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4">
+          <div className="ibm-type-b">
+            <h3 className="ibm-type-b">Our commitment</h3>
+            Kui is built for stability, coded on a solid TypeScript foundation and covered by thousands of tests. 
+            We will evolve Kui rapidly, based on your feedback, and keep it flexible with an open extension mechanism.
           </div>
         </div>
       </div>
