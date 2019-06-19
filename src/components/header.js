@@ -6,7 +6,7 @@ const Header = () => (
     <div className="ibm-grid-container">
       <div className="ibm-grid-col-lg-16-16 kui-nav-border"></div>
       <div className="ibm-grid-col-lg-16-1 ibm-grid-col-md-8-1 ibm-grid-col-sm-4-1">
-        <h1>Kui</h1>
+        <h1>Kui_</h1>
       </div>
       <div className="ibm-grid-col-lg-16-9 ibm-grid-col-md-8-2 ibm-grid-col-sm-4-0"></div>
       <div className="ibm-grid-col-lg-16-6 ibm-grid-col-md-8-5 ibm-grid-col-sm-4-3">
