@@ -1,6 +1,6 @@
 import React from "react"
 
-function useOs() {
+function currentOS() {
   const [os, setOs] = React.useState();
   React.useEffect(() => {
     var userAgent = navigator.userAgent;
@@ -16,7 +16,7 @@ function useOs() {
 }
 
 export const DownloadButton = () => {
-  const os = useOs();
+  const os = currentOS();
   switch (os) {
     case 'macos': return <DownloadLink url="https://dmg.kui-shell.org" text="Download for macOS" />;
     case 'windows': return <DownloadLink url="https://win32-zip.kui-shell.org" text="Download for Windows" />;
