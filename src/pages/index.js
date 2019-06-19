@@ -25,7 +25,7 @@ const IndexPage = () => (
           <h2 className="kui-tagline">
             kui is a terminal<br />
             with visualizations<br />
-            by and for DevOps<br />
+            by and for developers<br />
           </h2>
         </div>
         <div className="ibm-grid-col-lg-16-3"></div>
@@ -54,16 +54,8 @@ const IndexPage = () => (
         <ul className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 kui-links">
           <h3 className="ibm-type-a">Resources</h3>
           <DownloadButton />
-          <a href="#" className="kui-resources-link">
+          <a href="https://github.com/IBM/kui/releases" className="kui-resources-link">
             <span>All Downloads</span>
-            <img src={'ui/pagelink.svg'} alt="Link" />
-          </a>
-          <a href="#" className="kui-resources-link">
-            <span>Usage</span>
-            <img src={'ui/pagelink.svg'} alt="Link" />
-          </a>
-          <a href="#" className="kui-resources-link">
-            <span>Examples</span>
             <img src={'ui/pagelink.svg'} alt="Link" />
           </a>
         </ul>
