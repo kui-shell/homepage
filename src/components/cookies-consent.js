@@ -1,61 +1,56 @@
 import React from "react"
 import { useCookies } from "react-cookie"
 
+const defaultConsents = [
+  "sessions",
+  "events",
+  "views",
+  "scrolls",
+  "clicks",
+  "forms",
+]
+
 export const CookiesConsent = () => {
   const [cookies, setCookie] = useCookies([
     "cookiesConsent",
     "cookiesDialogDismissed",
   ])
-  const Countly = (window["Countly"] = window["Countly"] || {})
-  Countly.q = Countly.q || []
+  const [userConsent, setUserConsent] = React.useState()
 
   React.useEffect(() => {
-    if (cookies.CookiesConsent) {
-      console.log("User consented")
-    } else {
-      console.log("User didn't consent")
-      if (cookies.cookiesDialogDismissed) {
-        console.log("User selected")
-      } else {
-        console.log("The user didn't select before")
-      }
-    }
-  }, [])
+    const Countly = (window["Countly"] = window["Countly"] || {})
+    Countly.q = Countly.q || []
 
-  function handleCookiesConsent(e) {
-    if (e.target.value === "yes") {
+    if (userConsent === "yes") {
       setCookie("cookiesConsent", true)
       Countly.opt_in()
-      Countly.add_consent([
-        "sessions",
-        "events",
-        "views",
-        "scrolls",
-        "clicks",
-        "forms",
-      ])
-    } else {
-      setCookie("cookieConsent", false)
-      Countly.remove_consent([
-        "sessions",
-        "events",
-        "views",
-        "scrolls",
-        "clicks",
-        "forms",
-      ])
+      Countly.add_consent(defaultConsents)
+      setCookie("cookiesDialogDismissed", true)
     }
-    setCookie("cookiesDialogDismissed", true)
-  }
+    if (userConsent === "no") {
+      setCookie("cookieConsent", false)
+      Countly.remove_consent(defaultConsents)
+      Countly.opt_out()
+      setCookie("cookiesDialogDismissed", true)
+    }
+  }, [userConsent])
 
   if (!cookies.cookiesDialogDismissed) {
     return (
       <div>
         This is the Cookies Consent dialog
-        <button type="button" value="yes" onClick={handleCookiesConsent}>
+        <button
+          type="button"
+          value="yes"
+          onClick={event => setUserConsent(event.target.value)}
+        >
           Yes
         </button>
-        <button type="button" value="no" onClick={handleCookiesConsent}>
+        <button
+          type="button"
+          value="no"
+          onClick={event => setUserConsent(event.target.value)}
+        >
           No, please
         </button>
       </div>
