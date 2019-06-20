@@ -371,6 +371,10 @@ ul, li {
   padding:4rem 0 4rem 0;
 }
 
+.kui-examples-image {
+  border-radius: 4px;
+}
+
 .kui-marketing-container {
   background-color:var(--gray10);
   color:var(--black);
