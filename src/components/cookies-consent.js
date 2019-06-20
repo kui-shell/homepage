@@ -26,8 +26,24 @@ export const CookiesConsent = () => {
     if (e.target.value === "yes") {
       setCookie("cookiesConsent", true)
       Countly.opt_in()
+      Countly.add_consent([
+        "sessions",
+        "events",
+        "views",
+        "scrolls",
+        "clicks",
+        "forms",
+      ])
     } else {
       setCookie("cookieConsent", false)
+      Countly.remove_consent([
+        "sessions",
+        "events",
+        "views",
+        "scrolls",
+        "clicks",
+        "forms",
+      ])
     }
     setCookie("cookiesDialogDismissed", true)
   }
