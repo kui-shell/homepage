@@ -18,7 +18,7 @@ export const KuiExamples = (props) => {
             currentIndex: index,
             currentVideo: currentChildren.reference,
             currentSubtitle: currentChildren.subtitle
-        }); 
+        });
 
         addCountlyEvent({
             "key": `landing-tab`,
@@ -54,7 +54,7 @@ export const KuiExamples = (props) => {
                 <div className="ibm-grid-col-lg-16-1"></div>
                 <div className="ibm-grid-col-lg-16-1"></div>
                 <div className="ibm-grid-col-lg-16-14">
-                <img src={tabsState.currentVideo} alt={tabsState.currentSubtitle} width="100%" />
+                <img className="kui-examples-image" src={tabsState.currentVideo} alt={tabsState.currentSubtitle} width="100%" />
                 <p className="kui-video-subtitle">{tabsState.currentSubtitle}</p>
                 </div>
                 <div className="ibm-grid-col-lg-16-1"></div>
@@ -67,9 +67,9 @@ export const KuiExamples = (props) => {
 export const Tab = ({title, index, active, reference, subtitle, onClick}) => {
     return (
         <li className="ibm-tab" role="presentation" onClick={e => onClick(e, index)} index={index}>
-            <a 
+            <a
                 {...(active ? {'aria-selected': 'true', 'className' : 'ibm-active'} : {})}
-                role="tab" 
+                role="tab"
                 href={reference}
                 data-subtitle={subtitle}>
                 {title}
