@@ -36,21 +36,21 @@ function SEO({ description, lang, meta, keywords, title }) {
     applicationCategory: "Tool",
     about: description,
     audience: {
-      audienceType: 'Developers'
+      audienceType: "Developers",
     },
     author: site.siteMetadata.author,
     keywords,
-    license: 'https://github.com/IBM/kui/blob/master/LICENSE',
-    operatingSystem: ['OSX', 'Windows', 'Linux'],
+    license: "https://github.com/IBM/kui/blob/master/LICENSE",
+    operatingSystem: ["OSX", "Windows", "Linux"],
     offers: [
       {
-        description: 'Free',
+        description: "Free",
         price: 0,
-        priceCurrency: 'USD'
-      }
+        priceCurrency: "USD",
+      },
     ],
     screenshot: "https://www.kui-shell.org/images/screenshot.jpg",
-    image: "https://www.kui-shell.org/images/screenshot.jpg"
+    image: "https://www.kui-shell.org/images/screenshot.jpg",
   }
 
   return (
@@ -79,7 +79,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:image`,
-          content: `https://www.kui-shell.org/images/screenshot.jpg`
+          content: `https://www.kui-shell.org/images/screenshot.jpg`,
         },
         {
           name: `twitter:card`,
@@ -99,7 +99,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `twitter:image:src`,
-          content: `https://www.kui-shell.org/images/screenshot.jpg`
+          content: `https://www.kui-shell.org/images/screenshot.jpg`,
         },
       ]
         .concat(
