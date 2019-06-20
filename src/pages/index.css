@@ -274,6 +274,11 @@ ul, li {
 .kui-hero-video {
   width:100%;
   margin:4rem 0 5rem 0;
+  background-color: var(--gray20);
+  padding: 1rem;
+}
+.kui-hero-video.horizontal {
+  padding: 2rem;
 }
 
 .kui-links h3 {
