@@ -1,0 +1,32 @@
+.cookies-consent {
+  background-color: var(--blue61);
+  min-height: 26px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 26px;
+  padding: 8px 0 8px 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.cookies-consent .cookies-message {
+  margin: 20px;
+}
+
+.cookies-consent > .cookies-buttons {
+  margin: 20px;
+}
+
+.cookies-consent > .cookies-buttons > button {
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  border: 1px solid #b5becf;
+  padding: 5px;
+  margin-right: 20px;
+}

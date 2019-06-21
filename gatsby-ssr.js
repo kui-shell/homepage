@@ -6,6 +6,7 @@
 
 const React = require("react")
 const { Analytics } = require("./src/components/analytics")
+const { CookiesConsent } = require("./src/components/cookies-consent")
 const { config } = require("./src/config")
 
 exports.wrapRootElement = ({ element }) => {
@@ -13,11 +14,9 @@ exports.wrapRootElement = ({ element }) => {
     <>
       {element}
       <Analytics />
+      <CookiesConsent />
       <noscript>
-        <img
-          alt="analytics"
-          src={`${config.countly.pixelUrl}`}
-        />
+        <img alt="analytics" src={`${config.countly.pixelUrl}`} />
       </noscript>
     </>
   )
