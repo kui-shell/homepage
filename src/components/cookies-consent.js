@@ -1,5 +1,6 @@
 import React from "react"
 import { useCookies } from "react-cookie"
+import styles from "./cookies-consent.module.css"
 
 const defaultConsents = [
   "sessions",
@@ -37,22 +38,28 @@ export const CookiesConsent = () => {
 
   if (!cookies.cookiesDialogDismissed) {
     return (
-      <div>
-        This is the Cookies Consent dialog
-        <button
-          type="button"
-          value="yes"
-          onClick={event => setUserConsent(event.target.value)}
-        >
-          Yes
-        </button>
-        <button
-          type="button"
-          value="no"
-          onClick={event => setUserConsent(event.target.value)}
-        >
-          No, please
-        </button>
+      <div className={styles.cookiesConsent}>
+        <div className={styles.cookiesMessage}>
+          This site uses cookies to improve your experience :-)
+        </div>
+        <div className={styles.cookiesButtons}>
+          <button
+            type="button"
+            value="yes"
+            className={styles.acceptCookies}
+            onClick={event => setUserConsent(event.target.value)}
+          >
+            Yeah, sure
+          </button>
+          <button
+            type="button"
+            value="no"
+            className={styles.denyCookies}
+            onClick={event => setUserConsent(event.target.value)}
+          >
+            No, please
+          </button>
+        </div>
       </div>
     )
   }

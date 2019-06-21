@@ -1,10 +1,7 @@
 import React from "react"
 import { config } from "../config"
-import { useCookies } from "react-cookie"
 
 export function Analytics() {
-  const [cookies] = useCookies(["cookiesConsent"])
-
   React.useEffect(() => {
     //some default pre init
     const Countly = (window["Countly"] = window["Countly"] || {})
@@ -30,11 +27,6 @@ export function Analytics() {
       "https://cdnjs.cloudflare.com/ajax/libs/countly-sdk-web/18.8.2/countly.min.js"
     cly.onload = function() {
       Countly.init()
-      if (cookies.cookiesConsent) {
-        Countly.opt_in()
-      } else {
-        Countly.opt_out()
-      }
     }
     var s = document.getElementsByTagName("script")[0]
     s.parentNode.insertBefore(cly, s)
