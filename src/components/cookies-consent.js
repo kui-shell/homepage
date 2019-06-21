@@ -45,17 +45,15 @@ export const CookiesConsent = () => {
         <div className={styles.cookiesButtons}>
           <button
             type="button"
-            value="yes"
             className={styles.acceptCookies}
-            onClick={event => setUserConsent(event.target.value)}
+            onClick={event => setUserConsent("yes")}
           >
             Yeah, sure
           </button>
           <button
             type="button"
-            value="no"
             className={styles.denyCookies}
-            onClick={event => setUserConsent(event.target.value)}
+            onClick={event => setUserConsent("no")}
           >
             No, please
           </button>

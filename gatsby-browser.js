@@ -16,7 +16,7 @@ exports.wrapRootElement = ({ element }) => {
       <Analytics />
       <CookiesConsent />
       <noscript>
-        <img alt="analytics" src={`${config.countly.pixelUrl}`} />
+        <img alt="analytics" src={config.countly.pixelUrl} />
       </noscript>
     </>
   )
