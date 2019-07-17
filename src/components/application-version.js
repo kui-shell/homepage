@@ -8,24 +8,33 @@ function queryLastVersion(onLastVersion) {
     axios
       .get(`https://api.github.com/repos/IBM/kui/releases/latest`)
       .then(response => {
-        localCache.setItem("kui.lastUpdate", response.data.name)
-        onLastVersion(response.data.name)
+        if (response.status === 200) {
+          localCache.setItem("kui.lastUpdate", response.data.name)
+          onLastVersion(response.data.name)
+        }
       })
   } else {
     onLastVersion(lastVersion.value)
   }
 }
 
-export const ApplicationVersion = ({ defaultVersion }) => {
-  const [state, setState] = React.useState({
-    version: defaultVersion,
-  })
-
-  queryLastVersion(lastVersion => {
-    if (lastVersion && lastVersion !== state.version) {
-      setState({ version: lastVersion })
+export class ApplicationVersion extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      version: props.defaultVersion,
     }
-  })
+  }
 
-  return <span>Version {state.version}, Apache-2.0 License</span>
+  componentDidMount() {
+    queryLastVersion(lastVersion => {
+      if (lastVersion && lastVersion !== this.state.version) {
+        this.setState({ version: lastVersion })
+      }
+    })
+  }
+
+  render() {
+    return <span>Version {this.state.version}, Apache-2.0 License</span>
+  }
 }
