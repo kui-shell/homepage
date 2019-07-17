@@ -2,19 +2,20 @@ import React from "react"
 import axios from "axios"
 import { localCache } from "../utils/cache"
 
-function queryLastVersion(onLastVersion) {
+const queryLastVersion = async () => {
   const lastVersion = localCache.getItem("kui.lastUpdate")
-  if (localCache.isOutdated(lastVersion)) {
-    axios
-      .get(`https://api.github.com/repos/IBM/kui/releases/latest`)
-      .then(response => {
-        if (response.status === 200) {
-          localCache.setItem("kui.lastUpdate", response.data.name)
-          onLastVersion(response.data.name)
-        }
-      })
+  if (!localCache.isOutdated(lastVersion)) {
+    return lastVersion.value
+  }
+
+  const response = await axios.get(
+    `https://api.github.com/repos/IBM/kui/releases/latest`
+  )
+  if (response.status === 200) {
+    localCache.setItem("kui.lastUpdate", response.data.name)
+    return response.data.name
   } else {
-    onLastVersion(lastVersion.value)
+    throw new Error("Error trying to get the latest Github release")
   }
 }
 
@@ -24,7 +25,7 @@ export const ApplicationVersion = ({ defaultVersion }) => {
   })
 
   React.useEffect(() => {
-    queryLastVersion(lastVersion => {
+    queryLastVersion().then(lastVersion => {
       if (lastVersion && lastVersion !== state.version) {
         setState({ version: lastVersion })
       }
