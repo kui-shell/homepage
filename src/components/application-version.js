@@ -47,7 +47,7 @@ export const ApplicationVersion = ({ defaultVersion }) => {
   })
 
   queryLastVersion(lastVersion => {
-    if (lastVersion !== state.version) {
+    if (lastVersion && lastVersion !== state.version) {
       setState({ version: lastVersion })
     }
   })
