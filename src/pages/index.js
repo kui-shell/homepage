@@ -34,7 +34,7 @@ const IndexPage = () => (
         <div className="ibm-grid-col-lg-16-1"></div>
         <div className="ibm-grid-col-lg-16-3 kui-version ibm-type-a">
           <div className="divider"></div>
-          <ApplicationVersion defaultVersion="2.3.4" />
+          <ApplicationVersion defaultVersion="2.0.5" />
         </div>
       </div>
       <div className="ibm-grid-container">
