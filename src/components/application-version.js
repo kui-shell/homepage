@@ -18,23 +18,18 @@ function queryLastVersion(onLastVersion) {
   }
 }
 
-export class ApplicationVersion extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      version: props.defaultVersion,
-    }
-  }
+export const ApplicationVersion = ({ defaultVersion }) => {
+  const [state, setState] = React.useState({
+    version: defaultVersion,
+  })
 
-  componentDidMount() {
+  React.useEffect(() => {
     queryLastVersion(lastVersion => {
-      if (lastVersion && lastVersion !== this.state.version) {
-        this.setState({ version: lastVersion })
+      if (lastVersion && lastVersion !== state.version) {
+        setState({ version: lastVersion })
       }
     })
-  }
+  })
 
-  render() {
-    return <span>Version {this.state.version}, Apache-2.0 License</span>
-  }
+  return <span>Version {state.version}, Apache-2.0 License</span>
 }
