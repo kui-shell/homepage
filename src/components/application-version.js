@@ -25,11 +25,14 @@ export const ApplicationVersion = ({ defaultVersion }) => {
   })
 
   React.useEffect(() => {
-    queryLastVersion().then(lastVersion => {
+    async function launchQuery() {
+      const lastVersion = await queryLastVersion()
       if (lastVersion && lastVersion !== state.version) {
         setState({ version: lastVersion })
       }
-    })
+    }
+
+    launchQuery()
   })
 
   return <span>Version {state.version}, Apache-2.0 License</span>
