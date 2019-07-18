@@ -7,6 +7,7 @@ import CopyCode from "../components/copy-code"
 import { KuiExamples, Tab } from "../components/kui-examples"
 import { DownloadButton } from "../components/download-button"
 import { KuiVideo } from "../components/kui-video"
+import { ApplicationVersion } from "../components/application-version"
 
 import "./index.css"
 
@@ -33,7 +34,7 @@ const IndexPage = () => (
         <div className="ibm-grid-col-lg-16-1"></div>
         <div className="ibm-grid-col-lg-16-3 kui-version ibm-type-a">
           <div className="divider"></div>
-          <span>Version 1.0.1, Apache-2.0 License</span>
+          <ApplicationVersion defaultVersion="2.0.5" />
         </div>
       </div>
       <div className="ibm-grid-container">
