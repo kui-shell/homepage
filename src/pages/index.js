@@ -44,12 +44,11 @@ const IndexPage = () => (
       </div>
       <div className="ibm-grid-container">
         <div className="ibm-grid-col-lg-16-1"></div>
-        <ul
-          className="ibm-grid-col-lg-16-10 ibm-grid-col-md-8-4 kui-packages"
-          style={{ display: "none" }}
-        >
-          <CopyCode title="Brew" command="brew command" />
-          <CopyCode title="NPM" command="npm command" />
+        <ul className="ibm-grid-col-lg-16-10 ibm-grid-col-md-8-4 kui-packages">
+          <CopyCode
+            title="Bash"
+            command="curl -sL https://raw.githubusercontent.com/IBM/kui/master/tools/install.sh | sh"
+          />
         </ul>
         <ul className="ibm-grid-col-lg-16-4 ibm-grid-col-md-8-4 kui-links">
           <h3 className="ibm-type-a">Resources</h3>
