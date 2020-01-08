@@ -1,12 +1,12 @@
 # Kui's landing page
 
-[![Build Status](https://travis.ibm.com/ETX/kui-landing.svg?token=xyzxnZp9ALxp71M92JLp&branch=master)](https://travis.ibm.com/ETX/kui-landing)
+[![Build Status](https://travis-ci.org/kui-shell/kui-shell.github.io.svg&branch=master)](https://travis-ci.org/kui-shell/kui-shell.github.io)
 
 This is the landing page for the Kui project.
 
 ## Quick start
 
-**The project is automated so any change pushed to the `master` branch will be automatically deployed into the right cluster.**
+**The project is automated so any change pushed to the `master` branch will be automatically deployed to GitHub pages.**
 
 If you want to work in your local machine, because the project uses [Gatsby](https://www.gatsbyjs.org/), there are some commands that could be useful.
 
