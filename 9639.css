@@ -1,0 +1,1 @@
+.kui--scrollback:not([data-is-minisplit]):not([data-is-width-constrained]) .kui--repl-message{padding-top:.5em;background-color:var(--color-repl-background)}

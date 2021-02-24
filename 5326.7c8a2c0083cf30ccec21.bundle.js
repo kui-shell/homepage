@@ -1,0 +1,1 @@
+(self.webpackChunkkui_shell=self.webpackChunkkui_shell||[]).push([[5326],{85326:(e,s,l)=>{"use strict";l.r(s),l.d(s,{default:()=>a});var u=l(87367),k=l(64974);const a=()=>{if(!(0,k.isHeadless)())return(0,u.Gk)()}}}]);

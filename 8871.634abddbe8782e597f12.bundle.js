@@ -1,0 +1,1 @@
+(self.webpackChunkkui_shell=self.webpackChunkkui_shell||[]).push([[8871],{28871:i=>{"use strict";i.exports=JSON.parse('{"app":"icons/png/kui.png","large":"icons/svg/kui.svg","wide":"icons/svg/kui-wide.svg","favicon":"kui.ico","filesystem":{"darwin":"icons/icns/kui.icns","win32":"icons/ico/kui.ico","linux":"icons/png/kui.png"}}')}}]);

@@ -1,0 +1,1 @@
+(self.webpackChunkkui_shell=self.webpackChunkkui_shell||[]).push([[6020],{26020:(e,s,k)=>{"use strict";k.r(s)}}]);

@@ -1,0 +1,1 @@
+(self.webpackChunkkui_shell=self.webpackChunkkui_shell||[]).push([[6097],{46097:e=>{"use strict";e.exports=JSON.parse('{"productName":"Kui","productTitle":"Kui"}')}}]);

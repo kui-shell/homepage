@@ -1,0 +1,1 @@
+(self.webpackChunkkui_shell=self.webpackChunkkui_shell||[]).push([[2425],{12425:(e,n,s)=>{"use strict";s.r(n),s.d(n,{default:()=>u});var t=s(67294);const l=t.lazy((()=>s.e(6690).then(s.bind(s,16690))));function u(e){return t.createElement(l,Object.assign({},e))}}}]);

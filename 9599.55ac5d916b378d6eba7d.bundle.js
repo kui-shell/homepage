@@ -1,0 +1,1 @@
+(self.webpackChunkkui_shell=self.webpackChunkkui_shell||[]).push([[9599],{69599:e=>{"use strict";e.exports=JSON.parse('{"proxyServer":{"enabled":false}}')}}]);
